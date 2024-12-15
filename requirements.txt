@@ -1,0 +1,7 @@
+Flask==2.2.2
+Keras==2.11.0
+TensorFlow==2.11.0
+numpy==1.23.5
+Pillow==9.3.0
+Werkzeug==2.2.2
+gunicorn==20.1.0
