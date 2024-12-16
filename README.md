@@ -1,4 +1,4 @@
-# Image-Sign-Validation-Detection-System
+# Image-Signature-Validation-Detection-System
 
 This project uses Flask to create a web application that allows users to upload images containing signatures, detect and validate them based on a pre-trained dataset. The system supports uploading images, processes them, and displays the validation result.
 
