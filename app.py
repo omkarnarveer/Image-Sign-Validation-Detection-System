@@ -2,6 +2,7 @@ import os
 import numpy as np
 import cv2
 from flask import Flask, request, jsonify, render_template ,send_from_directory
+#from flask import Flask, request, jsonify, render_template ,
 from werkzeug.utils import secure_filename
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
@@ -12,6 +13,7 @@ app = Flask(__name__)
 # Paths
 UPLOAD_FOLDER = r'C:\Users\Omkar\OneDrive\Documents\Image Signature Validation System\uploads'
 TEMPLATES_FOLDER = r'C:\Users\Omkar\OneDrive\Documents\Image Signature Validation System'
+#TEMPLATES_FOLDER = r'C:\Users\Omkar\OneDrive\Documents\Image Signature Validation System\templates'
 MODEL_FOLDER = r'C:\Users\Omkar\OneDrive\Documents\Image Signature Validation System\model'
 DATASET_FOLDER = r'C:\Users\Omkar\OneDrive\Documents\Image Signature Validation System\dataset'
 
@@ -36,7 +38,8 @@ def allowed_file(filename):
 # Route for index page
 @app.route('/')
 def index():
-    return send_from_directory('.','index.html')  # Ensure you have an index.html in templates folder
+    #return render_template('index.html')  # Ensure you have an index.html in templates folder
+    return send_from_directory('.', 'index.html')
 
 # Route for file upload and prediction
 @app.route('/predict', methods=['POST'])
